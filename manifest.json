@@ -1,0 +1,28 @@
+{
+
+    "manifest_version": 2,
+    "name": "Executors filters",
+    "version": "1.0",
+  
+    "description": "Adds executor filters to Jira board.",
+  
+    "icons": {
+      "48": "icons/48x48.jpg"
+    },
+    
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*/RapidBoard.jspa*"
+      ],
+      "js": [
+        "add-executors-filter-buttons.js"
+      ]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "i.m.bwca@gmail.com"
+    }
+  }
+}

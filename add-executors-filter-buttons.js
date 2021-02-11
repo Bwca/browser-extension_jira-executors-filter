@@ -1,6 +1,10 @@
 function main() {
     const avatars = Array.from(document.querySelectorAll(".ghx-avatar-img"));
 
+    if (!avatars || !avatars.length) {
+        throw "WTF DUDE?";
+    }
+
     const executorNames = new Set(avatars.map((i) => i.dataset.tooltip));
 
     const executors = Array.from(executorNames).map((name) => {
@@ -79,4 +83,4 @@ function getExecutorsFilterButtons() {
     return Array.from(document.querySelectorAll("img.executor-filter"));
 }
 
-main();
+setTimeout(main, 1000);
