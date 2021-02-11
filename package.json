@@ -1,0 +1,24 @@
+{
+  "name": "jira-executors-filter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "add-executors-filter-buttons.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "web-ext": "web-ext build --source-dir ./src --overwrite-dest --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bwca/jira-executors-filter.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bwca/jira-executors-filter/issues"
+  },
+  "homepage": "https://github.com/Bwca/jira-executors-filter#readme",
+  "devDependencies": {
+    "web-ext": "^5.5.0"
+  }
+}
