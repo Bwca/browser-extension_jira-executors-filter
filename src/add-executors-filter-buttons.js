@@ -107,14 +107,14 @@ function updateExecutorFilterButtonsList() {
 (function main() {
     createIsCurrentlyActiveExecutorClassStyle();
 
-    const targetNode = document.querySelector("div.ghx-throbber");
+    const targetNode = document.getElementById("ghx-work");
 
     const config = { attributes: false, childList: true, subtree: true };
 
     const callback = (mutationsList) =>
         mutationsList.forEach((mutation) => {
             const hasTasksListUpdated =
-                mutation.type === "childList" && !!mutation.removedNodes.length;
+                mutation.type === "childList" && mutation.addedNodes.length;
             if (hasTasksListUpdated) {
                 updateExecutorFilterButtonsList();
             }

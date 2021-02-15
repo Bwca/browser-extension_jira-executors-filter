@@ -2,7 +2,7 @@
 
     "manifest_version": 2,
     "name": "Jira executors filters",
-    "version": "1.1",
+    "version": "1.2",
   
     "description": "Adds executor filters to Jira board.",
     
@@ -15,10 +15,5 @@
         "add-executors-filter-buttons.js"
       ]
     }
-  ],
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "jira-executors-filter-i.m.bwca@gmail.com"
-    }
-  }
+  ]
 }
