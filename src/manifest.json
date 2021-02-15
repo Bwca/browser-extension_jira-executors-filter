@@ -9,7 +9,7 @@
   "content_scripts": [
     {
       "matches": [
-        "*://*/*/RapidBoard.jspa*"
+        "*://*.it2g.ru/secure/RapidBoard.jspa*"
       ],
       "js": [
         "add-executors-filter-buttons.js"

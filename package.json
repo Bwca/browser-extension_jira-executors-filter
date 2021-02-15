@@ -5,7 +5,7 @@
   "main": "add-executors-filter-buttons.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:firefox": "web-ext build --source-dir ./src/firefox --overwrite-dest --verbose"
+    "build:firefox": "web-ext build --source-dir ./src --overwrite-dest --artifacts-dir ./build/firefox --verbose"
   },
   "repository": {
     "type": "git",
