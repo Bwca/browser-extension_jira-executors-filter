@@ -1,19 +1,14 @@
 {
-
     "manifest_version": 2,
     "name": "Jira executors filters",
     "version": "1.2",
-  
+
     "description": "Adds executor filters to Jira board.",
-    
-  "content_scripts": [
-    {
-      "matches": [
-        "*://*.it2g.ru/secure/RapidBoard.jspa*"
-      ],
-      "js": [
-        "add-executors-filter-buttons.js"
-      ]
-    }
-  ]
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.it2g.ru/secure/RapidBoard.jspa*"],
+            "js": ["add-executors-filter-buttons.js"]
+        }
+    ]
 }

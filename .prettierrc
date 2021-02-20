@@ -1,6 +1,5 @@
 {
     "arrowParens": "always",
-    "parser": "flow",
     "printWidth": 90,
     "semi": true,
     "singleQuote": false,
@@ -8,23 +7,11 @@
     "trailingComma": "es5",
     "useTabs": false,
     "overrides": [
-      {
-        "files": [
-          "*.ts",
-          "*.tsx"
-        ],
-        "options": {
-          "parser": "typescript"
+        {
+            "files": ["*.ts"],
+            "options": {
+                "parser": "typescript"
+            }
         }
-      },
-      {
-        "files": [
-          "*.scss",
-          "*.module.scss"
-        ],
-        "options": {
-          "parser": "scss"
-        }
-      }
     ]
-  }
+}
