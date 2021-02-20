@@ -8,7 +8,8 @@
         "prettify": "prettier --write .",
         "pretty-quick": "pretty-quick --pattern \"**/*.+(ts)\"",
         "lint": "node_modules/.bin/eslint --ext tsx src",
-        "build:firefox": "web-ext build --source-dir ./src --overwrite-dest --artifacts-dir ./build/firefox --verbose"
+        "build:dev": "tsup src/index.ts --minify && @powershell copy \"./src/manifest.json\" \"./dist/manifest.json\"",
+        "build:windows": "tsup src/index.ts --minify && @powershell copy \"./src/manifest.json\" \"./dist/manifest.json\" && web-ext build --source-dir ./src --overwrite-dest --artifacts-dir ./build/ --verbose"
     },
     "repository": {
         "type": "git",
@@ -32,6 +33,7 @@
         "husky": "^5.0.9",
         "prettier": "^2.2.1",
         "pretty-quick": "^3.1.0",
+        "tsup": "^4.0.0",
         "web-ext": "^5.5.0"
     },
     "dependencies": {
