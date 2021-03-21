@@ -8,8 +8,8 @@
         "prettify": "prettier --write .",
         "pretty-quick": "pretty-quick --pattern \"**/*.+(ts)\"",
         "lint": "node_modules/.bin/eslint --ext tsx src",
-        "build:dev": "tsup src/index.ts --minify && @powershell copy \"./src/manifest.json\" \"./dist/manifest.json\"",
-        "build:windows": "tsup src/index.ts --minify && @powershell copy \"./src/manifest.json\" \"./dist/manifest.json\" && web-ext build --source-dir ./dist --overwrite-dest --artifacts-dir ./build/ --verbose"
+        "build:dev": "tsup src/index.ts --minify && @powershell copy \"./src/manifest.json\" \"./dist/manifest.json\" & @powershell copy \"./src/icons/*.png\" \"./dist/icons/\"",
+        "build:windows": "npm run build:dev && web-ext build --source-dir ./dist --overwrite-dest --artifacts-dir ./build/ --verbose"
     },
     "repository": {
         "type": "git",

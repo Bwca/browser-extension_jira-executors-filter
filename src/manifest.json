@@ -1,14 +1,19 @@
 {
     "manifest_version": 2,
     "name": "Jira executors filters",
-    "version": "1.3",
+    "version": "1.5",
 
     "description": "Adds executor filters to Jira board.",
 
     "content_scripts": [
         {
-            "matches": ["*://*/*/RapidBoard.jspa*"],
+            "matches": ["*://jira.it2g.ru/secure/RapidBoard.jspa*"],
             "js": ["index.js"]
         }
-    ]
+    ],
+
+    "icons": {
+        "48": "/icons/48x48.png",
+        "128": "/icons/128x128.png"
+    }
 }

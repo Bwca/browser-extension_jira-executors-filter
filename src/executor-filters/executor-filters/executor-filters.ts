@@ -50,6 +50,13 @@ class ExecutorFilters {
             const dd = this.createExecutorIcon(i);
             filtersContainer.appendChild(dd);
         });
+        this.setExpandFiltersButtonVisible();
+    }
+
+    private setExpandFiltersButtonVisible(): void {
+        const quickfiltersTrigger = this.quickFiltersTrigger;
+        quickfiltersTrigger.style.display = '';
+        quickfiltersTrigger.style.position = 'relative';
     }
 
     private clearExecutorFilters(): void {
@@ -83,6 +90,10 @@ class ExecutorFilters {
         };
         dd.appendChild(img);
         return dd;
+    }
+
+    private get quickFiltersTrigger(): HTMLElement {
+        return document.querySelector('dd.ghx-quickfilter-trigger') as HTMLElement;
     }
 
     private get filterContainer(): HTMLElement {
